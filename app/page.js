@@ -440,7 +440,7 @@ export default function Home() {
                     <div className="lab-exercise">
                         <h3 className="text-xl font-semibold mb-2">Lab: Bayesian Inference for Parameter Estimation</h3>
                         <p><strong>Objective:</strong> Implement and visualize Bayesian updating for a simple parameter.</p>
-                        <div><strong>Task:</strong>
+                        <p><strong>Task:</strong>
                             <ol className="list-decimal list-inside pl-4 space-y-1 mt-2">
                                 <li>Choose a simple scenario:
                                     <ul className="list-disc list-inside pl-6">
@@ -455,7 +455,7 @@ export default function Home() {
                                 <li>Implement this using Python libraries like NumPy for calculations and SciPy.stats for distributions. Matplotlib/Seaborn for plotting.</li>
                                 <li>Visualize the evolution: Plot the prior, the likelihood (for the current data), and the resulting posterior distribution. Observe how the posterior sharpens and shifts as more data is incorporated.</li>
                             </ol>
-                        </div>
+                        </p>
                         <p className="mt-3"><strong>Pedagogical Goal:</strong> Starting with a non-deep learning example helps isolate and understand the Bayesian update mechanism (prior + data -&gt; posterior) before adding the complexity of neural network architectures. This builds a strong foundation for understanding BNNs.</p>
                     </div>
                     <button className="llm-button" onClick={() => handleSummarize('module1-4')}>✨ Summarize Module</button>
@@ -555,7 +555,7 @@ export default function Home() {
                     <div className="lab-exercise">
                         <h3 className="text-xl font-semibold mb-2">Lab: Visualizing BNN Predictions on a Toy Regression Task</h3>
                         <p><strong>Objective:</strong> Conceptually understand how a BNN produces a distribution of predictions representing its uncertainty.</p>
-                        <div><strong>Task:</strong>
+                        <p><strong>Task:</strong>
                             <ol className="list-decimal list-inside pl-4 space-y-1 mt-2">
                                 <li><strong>Dataset:</strong> Use a simple 1D or 2D regression dataset (e.g., a noisy sine wave: $y = \sin(x) + \epsilon$).</li>
                                 <li><strong>Traditional NN (Baseline):</strong>
@@ -578,7 +578,7 @@ export default function Home() {
                                     </ul>
                                 </li>
                             </ol>
-                        </div>
+                        </p>
                         <p className="mt-3"><strong>Pedagogical Goal:</strong> This exercise is not about full BNN implementation at this stage but about visualizing the core concept: a BNN doesn't give one answer, but a range of possibilities reflecting its uncertainty. This makes the abstract idea of a "distribution over possible neural networks" more intuitive before diving into complex inference techniques.</p>
                     </div>
                     <button className="llm-button" onClick={() => handleSummarize('module2-4')}>✨ Summarize Module</button>
