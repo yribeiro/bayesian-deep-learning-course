@@ -17,5 +17,95 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */ /* Replaced by Geist in layout.tsx */
+}
+
+/* Styles extracted from app/page.tsx and index.html */
+.sidebar-link {
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+.sidebar-link:hover, .sidebar-link.active {
+    @apply bg-teal-50 text-teal-700 border-teal-700; /* Updated to use Tailwind colors that match the hex codes */
+    /* Original:
+    background-color: #E0F2F1; /* Muted Teal Accent - Lighter for hover/active */
+    /* color: #00796B; /* Muted Teal Accent - Darker for text */
+    /* border-left-color: #00796B; /* Muted Teal Accent */
+}
+.content-section {
+    display: none;
+}
+.content-section.active {
+    display: block;
+}
+
+/* Headings h1, h2, h3 from index.html style. 
+   Note: h1 in page.tsx header uses "text-white", so this will be overridden by utility class.
+   Other h2, h3 will inherit this if not overridden by utility classes.
+*/
+h1, h2, h3 {
+    color: #004D40; /* Muted Teal Accent - Darkest for major headings */
+}
+
+.formula {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #EFFBF0;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-style: italic;
+}
+.key-term {
+    font-weight: 600;
+    color: #00695C; /* Muted Teal Accent */
+}
+.chart-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Max width for the chart */
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px; /* Base height */
+    max-height: 350px; /* Max height */
+}
+@media (min-width: 768px) {
+    .chart-container {
+        height: 350px;
+    }
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #D1D5DB; /* Gray-300 */
+    padding: 0.75rem;
+    text-align: left;
+}
+th {
+    background-color: #F3F4F6; /* Gray-100 */
+}
+.lab-exercise {
+    background-color: #E8F5E9; /* Light green background for exercises */
+    border-left: 4px solid #4CAF50; /* Green accent border */
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 4px;
+}
+.llm-output {
+    background-color: #F0F8FF; /* Light blue for LLM output */
+    border-left: 4px solid #87CEEB; /* Sky blue accent */
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 4px;
+    white-space: pre-wrap; /* Preserve whitespace and line breaks */
+}
+
+/* .llm-button from index.html - uses @apply */
+.llm-button {
+    @apply bg-teal-600 text-white px-4 py-2 rounded-md hover:bg-teal-700 transition-colors duration-200 mt-2 mr-2;
+}
+
+/* Ensure body font is primarily driven by layout.tsx Tailwind classes */
+body {
+    @apply antialiased; /* This was on body in layout.tsx, good to have here or ensure font variables cover it */
 }
