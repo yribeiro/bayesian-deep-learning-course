@@ -1,3 +1,4 @@
+"use client";
 import Head from 'next/head';
 import Script from 'next/script'; // For external scripts like Chart.js
 import { useEffect, useRef } from 'react';
